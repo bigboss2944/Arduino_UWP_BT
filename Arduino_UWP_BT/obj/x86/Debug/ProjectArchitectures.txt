@@ -1,0 +1,1 @@
+C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Arduino_UWP_BT.csproj;x86
