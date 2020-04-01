@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
+using System.Threading.Tasks;
 using Windows.Devices.Bluetooth;
 using Windows.Devices.Bluetooth.Rfcomm;
 using Windows.Devices.Enumeration;
@@ -46,6 +49,7 @@ namespace Arduino_UWP_BT
         private DataWriter chatWriter = null;
         private RfcommDeviceService chatService = null;
         private BluetoothDevice bluetoothDevice;
+        private DataReader chatReader = null;
 
         public Scenario1_ChatClient()
         {
@@ -315,9 +319,10 @@ namespace Arduino_UWP_BT
 
                 SetChatUI(attributeReader.ReadString(serviceNameLength), bluetoothDevice.Name);
                 chatWriter = new DataWriter(chatSocket.OutputStream);
-
-                DataReader chatReader = new DataReader(chatSocket.InputStream);
+                chatReader = new DataReader(chatSocket.InputStream);
                 ReceiveStringLoop(chatReader);
+
+
             }
             catch (Exception ex) when ((uint)ex.HResult == 0x80070490) // ERROR_ELEMENT_NOT_FOUND
             {
@@ -361,6 +366,8 @@ namespace Arduino_UWP_BT
         private void SendButton_Click(object sender, RoutedEventArgs e)
         {
             SendMessage();
+            
+            
         }
 
         public void KeyboardKey_Pressed(object sender, KeyRoutedEventArgs e)
@@ -385,6 +392,8 @@ namespace Arduino_UWP_BT
 
                     ConversationList.Items.Add("Sent: " + MessageTextBox.Text);
                     MessageTextBox.Text = "";
+                    
+                    //ReceiveStringLoop(chatReader);
                     await chatWriter.StoreAsync();
                     
                 }
@@ -396,52 +405,51 @@ namespace Arduino_UWP_BT
                     NotifyType.StatusMessage);
             }
 
+            //ReceiveStringLoop(chatReader);
             
 
         }
 
+
         private async void ReceiveStringLoop(DataReader chatReader)
         {
-            try
+
+            string runStr = "";
+            uint inBufferCnt = 0;
+            //size of bytes to load each time.
+            uint sizeToReadEachTime = 256;
+            CancellationTokenSource cts = new CancellationTokenSource();
+            //set timeout here.
+            cts.CancelAfter(500);
+
+
+            //set the read options for the input stream to Partial.
+            chatReader.InputStreamOptions = Windows.Storage.Streams.InputStreamOptions.Partial;
+            //chatReader.UnicodeEncoding = Windows.Storage.Streams.UnicodeEncoding.Utf8;
+            //chatReader.ByteOrder = Windows.Storage.Streams.ByteOrder.LittleEndian;
+
+
+            inBufferCnt = await chatReader.LoadAsync(sizeToReadEachTime);
+            
+            runStr += chatReader.ReadString(inBufferCnt);
+            
+
+            
+
+            if ((runStr.Length == inBufferCnt)&&(inBufferCnt!=1))
             {
-                uint size = await chatReader.LoadAsync(sizeof(uint));
-                if (size < sizeof(uint))
-                {
-                    Disconnect("Remote device terminated connection - make sure only one instance of server is running on remote device");
-                    return;
-                }
-
-                uint stringLength = chatReader.ReadUInt32();
-                uint actualStringLength = await chatReader.LoadAsync(stringLength);
-                if (actualStringLength != stringLength)
-                {
-                    // The underlying socket was closed before we were able to read the whole data
-                    return;
-                }
-
-                ConversationList.Items.Add("Received: " + chatReader.ReadString(stringLength));
-
-                ReceiveStringLoop(chatReader);
+                ConversationList.Items.Add("Received: " + runStr); //In order to modify only one time the ConversationList
             }
-            catch (Exception ex)
-            {
-                lock (this)
-                {
-                    if (chatSocket == null)
-                    {
-                        // Do not print anything here -  the user closed the socket.
-                        if ((uint)ex.HResult == 0x80072745)
-                            rootPage.NotifyUser("Disconnect triggered by remote device", NotifyType.StatusMessage);
-                        else if ((uint)ex.HResult == 0x800703E3)
-                            rootPage.NotifyUser("The I/O operation has been aborted because of either a thread exit or an application request.", NotifyType.StatusMessage);
-                    }
-                    else
-                    {
-                        Disconnect("Read stream failed with error: " + ex.Message);
-                    }
-                }
-            }
+            
+
+            ReceiveStringLoop(chatReader);
+            //reader.DetachStream();
+
+            //return runStr;
         }
+
+
+        
 
         private void DisconnectButton_Click(object sender, RoutedEventArgs e)
         {
@@ -511,7 +519,5 @@ namespace Arduino_UWP_BT
                 ConnectButton.IsEnabled = false;
             }
         }
-    }
-
-    
+    } 
 }
