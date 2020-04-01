@@ -1,145 +1,126 @@
-/**
- * \file
- *
- * \brief Empty user application template
- *
- */
-
-/**
- * \mainpage User Application template doxygen documentation
- *
- * \par Empty user application template
- *
- * Bare minimum empty user application template
- *
- * \par Content
- *
- * -# Include the ASF header files (through asf.h)
- * -# "Insert system clock initialization code here" comment
- * -# Minimal main function that starts with a call to board_init()
- * -# "Insert application code here" comment
- *
- */
-
-/*
- * Include header files for all drivers that have been imported from
- * Atmel Software Framework (ASF).
- */
-/*
- * Support and FAQ: visit <a href="https://www.microchip.com/support/">Microchip Support</a>
- */
-
-
-#define F_CPU 16000000UL
-#define BAUD 9600
-#define MYUBRR F_CPU/16/BAUD-1
-#define delay(ms)
-
-#include <asf.h>
 #include <avr/io.h>
+#include <stdlib.h>
+#define F_CPU 16000000UL
 #include <util/delay.h>
+#define BAUDRATE 9600
+#define BAUD_PRESCALLER (((F_CPU / (BAUDRATE * 16UL))) - 1)
 
-unsigned int Ctemp;
-unsigned int Ftemp;
+uint16_t adc_value;            //Variable used to store the value read from the ADC
+char buffer[5];                //Output of the itoa function
+uint8_t i=0;                //Variable for the for() loop
 
+void adc_init(void);            //Function to initialize/configure the ADC
+uint16_t read_adc(uint8_t channel);    //Function to read an arbitrary analogic channel/pin
+void USART_init(void);            //Function to initialize and configure the USART/serial
+void USART_send( unsigned char data);    //Function that sends a char over the serial port
+void USART_putstring(char* StringPtr);    //Function that sends a string over the serial port
+unsigned char USART_Receive( void );
 
-void USART_Transmit( unsigned char data )
-{
-	/* Wait for empty transmit buffer */
-	while ( !( UCSR0A & (1<<UDRE0)) );
-	/* Put data into buffer, sends the data */
-	UDR0 = data;
-}
-
-unsigned char USART_Receive( void ){
+int main(void){
+	adc_init();        //Setup the ADC
+	USART_init();        //Setup the USART
 	
-	while ( !(UCSR0A & (1<<RXC0)) )
-	;/* Get and return received data from buffer */
-	return UDR0;
-	}
-
-void USART_Init( unsigned int ubrr)
-{
-	/*Set baud rate */
-	UBRR0H = (unsigned char)(ubrr>>8);
-	UBRR0L = (unsigned char)ubrr;
-	/*Enable receiver and transmitter */
-	UCSR0B = (1<<RXEN0)|(1<<TXEN0);
-	/* Set frame format: 8data, 2stop bit */
-	UCSR0C = (1<<USBS0)|(3<<UCSZ00);
-	}
-	
-double GetTemp(void)
-{
-	ADMUX = (3 << REFS0) | (8 << MUX0); // 1.1V REF, channel#8 is temperature
-	ADCSRA |= (1 << ADEN) | (6 << ADPS0);       // enable the ADC div64
-	delay(20);                  // wait for voltages to become stable.
-	ADCSRA |= (1 << ADSC);      // Start the ADC
-
-	while (ADCSRA & (1 << ADSC));       // Detect end-of-conversion
-	// The offset of 324.31 could be wrong. It is just an indication.
-	// The returned temperature is in degrees Celcius.
-	return (ADCW - 324.31) / 1.22;
-}
-
-int main (void)
-{
-	/* Insert system clock initialization code here (sysclk_init()). */
-	USART_Init(MYUBRR);
-
-	board_init();
-	
-	DDRB |= (1<<DDB5); //Configure le pin 5 du port B en sortie, le reste en entrée
+	DDRB |= (1<<DDB5); //Configure le pin 5 du port B en sortie
 	DDRB |= (1<<DDB4);
 	DDRB |= (1<<DDB3);
 	DDRB |= (1<<DDB2);
+	DDRB |= (1<<DDB1);
+	DDRB |= (1<<DDB0);
 	
 	unsigned char carac;
-	double temp;
-	//DDRB = 0x3A;
 	
-	while(1){
-		
-		
+	for(;;){        //Our infinite loop
+		//unsigned char carac;
 		carac=USART_Receive();
-		USART_Transmit(carac);
 		
-		if(carac=='1')
+		if(carac=='v'){
+			
+			adc_value = read_adc(0);        //Read one ADC channel
+			itoa(adc_value, buffer, 10);        //Convert the read value to an ascii string
+			USART_putstring("  ");            //Some more formatting
+			USART_putstring(buffer);        //Send the converted value to the terminal
+			
+			                //You can tweak this value to have slower or faster readings or for max speed remove this line
+			USART_send('\r');
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+			//_delay_ms(2000);		
+		}
+		else if(carac=='1')
 		{
 			PORTB=0x20;
-			
-			
-			
+			USART_send(carac);
+			USART_send('\r');
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
 		}
 		else if(carac=='2'){
 			PORTB=0x30;
-			
-			
-			
+			USART_send(carac);
+			USART_send('\r');
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
 		}
 		else if(carac=='3'){
 			PORTB=0x38;
-			
-			
-			
+			USART_send(carac);
+			USART_send('\r');
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
 		}
 		else if(carac=='4'){
 			PORTB=0x3C;
-			
-			
-			
+			USART_send(carac);
+			USART_send('\r');
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
 		}
 		else if(carac=='0'){
 			PORTB=0x00;
-			
-			
-			
+			USART_send(carac);
+			USART_send('\r');
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
 		}
-	
-		
-			
-		
 	}
+	return 0;
+}
 
+void adc_init(void){
+	ADCSRA |= ((1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0));    //16Mhz/128 = 125Khz the ADC reference clock
+	ADMUX |= (1<<REFS0);                //Voltage reference from Avcc (5v)
+	ADCSRA |= (1<<ADEN);                //Turn on ADC
+	ADCSRA |= (1<<ADSC);                //Do an initial conversion because this one is the slowest and to ensure that everything is up and running
+}
+
+
+
+uint16_t read_adc(uint8_t channel){
+	ADMUX &= 0xF0;                    //Clear the older channel that was read
+	ADMUX |= channel;                //Defines the new ADC channel to be read
+	ADCSRA |= (1<<ADSC);                //Starts a new conversion
+	while(ADCSRA & (1<<ADSC));            //Wait until the conversion is done
+	return ADCW;                    //Returns the ADC value of the chosen channel
+}
+
+unsigned char USART_Receive( void ){
+	while ( !(UCSR0A & (1<<RXC0)) );/* Get and return received data from buffer */
+	return UDR0;
+}
+
+void USART_init(void){
+	
+	UBRR0H = (uint8_t)(BAUD_PRESCALLER>>8);
+	UBRR0L = (uint8_t)(BAUD_PRESCALLER);
+	UCSR0B = (1<<RXEN0)|(1<<TXEN0);
+	UCSR0C = (3<<UCSZ00);
+}
+
+void USART_send( unsigned char data){
+	
+	while(!(UCSR0A & (1<<UDRE0)));
+	UDR0 = data;
+	
+}
+
+void USART_putstring(char* StringPtr){
+	
+	while(*StringPtr != 0x00){
+		USART_send(*StringPtr);
+	StringPtr++;}
 	
 }

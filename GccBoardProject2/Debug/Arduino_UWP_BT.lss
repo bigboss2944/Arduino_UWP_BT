@@ -3,31 +3,33 @@ Arduino_UWP_BT.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000176  2**0
+  0 .data         00000004  00800100  00000250  000002e4  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         00000122  00000000  00000000  00000054  2**1
+  1 .text         00000250  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  00000176  2**0
+  2 .bss          00000007  00800104  00800104  000002e8  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  000002e8  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000001a8  2**2
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000318  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000060  00000000  00000000  000001e8  2**0
+  5 .debug_aranges 00000050  00000000  00000000  00000358  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000aa6  00000000  00000000  00000248  2**0
+  6 .debug_info   00000a12  00000000  00000000  000003a8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000848  00000000  00000000  00000cee  2**0
+  7 .debug_abbrev 000007bc  00000000  00000000  00000dba  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   00000cca  00000000  00000000  00001536  2**0
+  8 .debug_line   0000060c  00000000  00000000  00001576  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000088  00000000  00000000  00002200  2**2
+  9 .debug_frame  00000090  00000000  00000000  00001b84  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00011851  00000000  00000000  00002288  2**0
+ 10 .debug_str    0000713a  00000000  00000000  00001c14  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000094  00000000  00000000  00013ad9  2**0
+ 11 .debug_loc    00000118  00000000  00000000  00008d4e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000040  00000000  00000000  00013b6d  2**0
+ 12 .debug_ranges 00000040  00000000  00000000  00008e66  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_macro  00000a69  00000000  00000000  00013bad  2**0
+ 13 .debug_macro  0000034a  00000000  00000000  00008ea6  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -35,55 +37,55 @@ Disassembly of section .text:
 00000000 <__vectors>:
    0:	33 c0       	rjmp	.+102    	; 0x68 <__ctors_end>
    2:	00 00       	nop
-   4:	41 c0       	rjmp	.+130    	; 0x88 <__bad_interrupt>
+   4:	4c c0       	rjmp	.+152    	; 0x9e <__bad_interrupt>
    6:	00 00       	nop
-   8:	3f c0       	rjmp	.+126    	; 0x88 <__bad_interrupt>
+   8:	4a c0       	rjmp	.+148    	; 0x9e <__bad_interrupt>
    a:	00 00       	nop
-   c:	3d c0       	rjmp	.+122    	; 0x88 <__bad_interrupt>
+   c:	48 c0       	rjmp	.+144    	; 0x9e <__bad_interrupt>
    e:	00 00       	nop
-  10:	3b c0       	rjmp	.+118    	; 0x88 <__bad_interrupt>
+  10:	46 c0       	rjmp	.+140    	; 0x9e <__bad_interrupt>
   12:	00 00       	nop
-  14:	39 c0       	rjmp	.+114    	; 0x88 <__bad_interrupt>
+  14:	44 c0       	rjmp	.+136    	; 0x9e <__bad_interrupt>
   16:	00 00       	nop
-  18:	37 c0       	rjmp	.+110    	; 0x88 <__bad_interrupt>
+  18:	42 c0       	rjmp	.+132    	; 0x9e <__bad_interrupt>
   1a:	00 00       	nop
-  1c:	35 c0       	rjmp	.+106    	; 0x88 <__bad_interrupt>
+  1c:	40 c0       	rjmp	.+128    	; 0x9e <__bad_interrupt>
   1e:	00 00       	nop
-  20:	33 c0       	rjmp	.+102    	; 0x88 <__bad_interrupt>
+  20:	3e c0       	rjmp	.+124    	; 0x9e <__bad_interrupt>
   22:	00 00       	nop
-  24:	31 c0       	rjmp	.+98     	; 0x88 <__bad_interrupt>
+  24:	3c c0       	rjmp	.+120    	; 0x9e <__bad_interrupt>
   26:	00 00       	nop
-  28:	2f c0       	rjmp	.+94     	; 0x88 <__bad_interrupt>
+  28:	3a c0       	rjmp	.+116    	; 0x9e <__bad_interrupt>
   2a:	00 00       	nop
-  2c:	2d c0       	rjmp	.+90     	; 0x88 <__bad_interrupt>
+  2c:	38 c0       	rjmp	.+112    	; 0x9e <__bad_interrupt>
   2e:	00 00       	nop
-  30:	2b c0       	rjmp	.+86     	; 0x88 <__bad_interrupt>
+  30:	36 c0       	rjmp	.+108    	; 0x9e <__bad_interrupt>
   32:	00 00       	nop
-  34:	29 c0       	rjmp	.+82     	; 0x88 <__bad_interrupt>
+  34:	34 c0       	rjmp	.+104    	; 0x9e <__bad_interrupt>
   36:	00 00       	nop
-  38:	27 c0       	rjmp	.+78     	; 0x88 <__bad_interrupt>
+  38:	32 c0       	rjmp	.+100    	; 0x9e <__bad_interrupt>
   3a:	00 00       	nop
-  3c:	25 c0       	rjmp	.+74     	; 0x88 <__bad_interrupt>
+  3c:	30 c0       	rjmp	.+96     	; 0x9e <__bad_interrupt>
   3e:	00 00       	nop
-  40:	23 c0       	rjmp	.+70     	; 0x88 <__bad_interrupt>
+  40:	2e c0       	rjmp	.+92     	; 0x9e <__bad_interrupt>
   42:	00 00       	nop
-  44:	21 c0       	rjmp	.+66     	; 0x88 <__bad_interrupt>
+  44:	2c c0       	rjmp	.+88     	; 0x9e <__bad_interrupt>
   46:	00 00       	nop
-  48:	1f c0       	rjmp	.+62     	; 0x88 <__bad_interrupt>
+  48:	2a c0       	rjmp	.+84     	; 0x9e <__bad_interrupt>
   4a:	00 00       	nop
-  4c:	1d c0       	rjmp	.+58     	; 0x88 <__bad_interrupt>
+  4c:	28 c0       	rjmp	.+80     	; 0x9e <__bad_interrupt>
   4e:	00 00       	nop
-  50:	1b c0       	rjmp	.+54     	; 0x88 <__bad_interrupt>
+  50:	26 c0       	rjmp	.+76     	; 0x9e <__bad_interrupt>
   52:	00 00       	nop
-  54:	19 c0       	rjmp	.+50     	; 0x88 <__bad_interrupt>
+  54:	24 c0       	rjmp	.+72     	; 0x9e <__bad_interrupt>
   56:	00 00       	nop
-  58:	17 c0       	rjmp	.+46     	; 0x88 <__bad_interrupt>
+  58:	22 c0       	rjmp	.+68     	; 0x9e <__bad_interrupt>
   5a:	00 00       	nop
-  5c:	15 c0       	rjmp	.+42     	; 0x88 <__bad_interrupt>
+  5c:	20 c0       	rjmp	.+64     	; 0x9e <__bad_interrupt>
   5e:	00 00       	nop
-  60:	13 c0       	rjmp	.+38     	; 0x88 <__bad_interrupt>
+  60:	1e c0       	rjmp	.+60     	; 0x9e <__bad_interrupt>
   62:	00 00       	nop
-  64:	11 c0       	rjmp	.+34     	; 0x88 <__bad_interrupt>
+  64:	1c c0       	rjmp	.+56     	; 0x9e <__bad_interrupt>
 	...
 
 00000068 <__ctors_end>:
@@ -94,176 +96,401 @@ Disassembly of section .text:
   70:	de bf       	out	0x3e, r29	; 62
   72:	cd bf       	out	0x3d, r28	; 61
 
-00000074 <__do_clear_bss>:
-  74:	21 e0       	ldi	r18, 0x01	; 1
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
   76:	a0 e0       	ldi	r26, 0x00	; 0
   78:	b1 e0       	ldi	r27, 0x01	; 1
-  7a:	01 c0       	rjmp	.+2      	; 0x7e <.do_clear_bss_start>
+  7a:	e0 e5       	ldi	r30, 0x50	; 80
+  7c:	f2 e0       	ldi	r31, 0x02	; 2
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	a4 30       	cpi	r26, 0x04	; 4
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
 
-0000007c <.do_clear_bss_loop>:
-  7c:	1d 92       	st	X+, r1
+0000008a <__do_clear_bss>:
+  8a:	21 e0       	ldi	r18, 0x01	; 1
+  8c:	a4 e0       	ldi	r26, 0x04	; 4
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
 
-0000007e <.do_clear_bss_start>:
-  7e:	a0 30       	cpi	r26, 0x00	; 0
-  80:	b2 07       	cpc	r27, r18
-  82:	e1 f7       	brne	.-8      	; 0x7c <.do_clear_bss_loop>
-  84:	26 d0       	rcall	.+76     	; 0xd2 <main>
-  86:	4b c0       	rjmp	.+150    	; 0x11e <_exit>
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
 
-00000088 <__bad_interrupt>:
-  88:	bb cf       	rjmp	.-138    	; 0x0 <__vectors>
+00000094 <.do_clear_bss_start>:
+  94:	ab 30       	cpi	r26, 0x0B	; 11
+  96:	b2 07       	cpc	r27, r18
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	52 d0       	rcall	.+164    	; 0x140 <main>
+  9c:	d7 c0       	rjmp	.+430    	; 0x24c <_exit>
 
-0000008a <board_init>:
-  8a:	95 b1       	in	r25, 0x05	; 5
-  8c:	84 b1       	in	r24, 0x04	; 4
-  8e:	80 62       	ori	r24, 0x20	; 32
-  90:	8f 77       	andi	r24, 0x7F	; 127
-  92:	84 b9       	out	0x04, r24	; 4
-  94:	89 2f       	mov	r24, r25
-  96:	80 6a       	ori	r24, 0xA0	; 160
-  98:	85 b9       	out	0x05, r24	; 5
-  9a:	08 95       	ret
+0000009e <__bad_interrupt>:
+  9e:	b0 cf       	rjmp	.-160    	; 0x0 <__vectors>
 
-0000009c <USART_Transmit>:
-
-	while (ADCSRA & (1 << ADSC));       // Detect end-of-conversion
-	// The offset of 324.31 could be wrong. It is just an indication.
-	// The returned temperature is in degrees Celcius.
-	return (ADCW - 324.31) / 1.22;
+000000a0 <adc_init>:
+	}
+	return 0;
 }
-  9c:	e0 ec       	ldi	r30, 0xC0	; 192
-  9e:	f0 e0       	ldi	r31, 0x00	; 0
-  a0:	90 81       	ld	r25, Z
-  a2:	95 ff       	sbrs	r25, 5
-  a4:	fd cf       	rjmp	.-6      	; 0xa0 <USART_Transmit+0x4>
-  a6:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__DATA_REGION_ORIGIN__+0x66>
-  aa:	08 95       	ret
 
-000000ac <USART_Receive>:
-  ac:	e0 ec       	ldi	r30, 0xC0	; 192
-  ae:	f0 e0       	ldi	r31, 0x00	; 0
-  b0:	80 81       	ld	r24, Z
-  b2:	88 23       	and	r24, r24
-  b4:	ec f7       	brge	.-6      	; 0xb0 <USART_Receive+0x4>
-  b6:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__DATA_REGION_ORIGIN__+0x66>
-  ba:	08 95       	ret
+void adc_init(void){
+	ADCSRA |= ((1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0));    //16Mhz/128 = 125Khz the ADC reference clock
+  a0:	ea e7       	ldi	r30, 0x7A	; 122
+  a2:	f0 e0       	ldi	r31, 0x00	; 0
+  a4:	80 81       	ld	r24, Z
+  a6:	87 60       	ori	r24, 0x07	; 7
+  a8:	80 83       	st	Z, r24
+	ADMUX |= (1<<REFS0);                //Voltage reference from Avcc (5v)
+  aa:	ac e7       	ldi	r26, 0x7C	; 124
+  ac:	b0 e0       	ldi	r27, 0x00	; 0
+  ae:	8c 91       	ld	r24, X
+  b0:	80 64       	ori	r24, 0x40	; 64
+  b2:	8c 93       	st	X, r24
+	ADCSRA |= (1<<ADEN);                //Turn on ADC
+  b4:	80 81       	ld	r24, Z
+  b6:	80 68       	ori	r24, 0x80	; 128
+  b8:	80 83       	st	Z, r24
+	ADCSRA |= (1<<ADSC);                //Do an initial conversion because this one is the slowest and to ensure that everything is up and running
+  ba:	80 81       	ld	r24, Z
+  bc:	80 64       	ori	r24, 0x40	; 64
+  be:	80 83       	st	Z, r24
+  c0:	08 95       	ret
 
-000000bc <USART_Init>:
-  bc:	90 93 c5 00 	sts	0x00C5, r25	; 0x8000c5 <__DATA_REGION_ORIGIN__+0x65>
-  c0:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__DATA_REGION_ORIGIN__+0x64>
-  c4:	88 e1       	ldi	r24, 0x18	; 24
-  c6:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__DATA_REGION_ORIGIN__+0x61>
-  ca:	8e e0       	ldi	r24, 0x0E	; 14
-  cc:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__DATA_REGION_ORIGIN__+0x62>
-  d0:	08 95       	ret
+000000c2 <read_adc>:
+}
 
-000000d2 <main>:
 
-int main (void)
-{
-	/* Insert system clock initialization code here (sysclk_init()). */
-	USART_Init(MYUBRR);
-  d2:	87 e6       	ldi	r24, 0x67	; 103
-  d4:	90 e0       	ldi	r25, 0x00	; 0
-  d6:	f2 df       	rcall	.-28     	; 0xbc <USART_Init>
 
-	board_init();
-  d8:	d8 df       	rcall	.-80     	; 0x8a <board_init>
-  da:	25 9a       	sbi	0x04, 5	; 4
+uint16_t read_adc(uint8_t channel){
+	ADMUX &= 0xF0;                    //Clear the older channel that was read
+  c2:	ec e7       	ldi	r30, 0x7C	; 124
+  c4:	f0 e0       	ldi	r31, 0x00	; 0
+  c6:	90 81       	ld	r25, Z
+  c8:	90 7f       	andi	r25, 0xF0	; 240
+  ca:	90 83       	st	Z, r25
+	ADMUX |= channel;                //Defines the new ADC channel to be read
+  cc:	90 81       	ld	r25, Z
+  ce:	89 2b       	or	r24, r25
+  d0:	80 83       	st	Z, r24
+	ADCSRA |= (1<<ADSC);                //Starts a new conversion
+  d2:	ea e7       	ldi	r30, 0x7A	; 122
+  d4:	f0 e0       	ldi	r31, 0x00	; 0
+  d6:	80 81       	ld	r24, Z
+  d8:	80 64       	ori	r24, 0x40	; 64
+  da:	80 83       	st	Z, r24
+	while(ADCSRA & (1<<ADSC));            //Wait until the conversion is done
+  dc:	80 81       	ld	r24, Z
+  de:	86 fd       	sbrc	r24, 6
+  e0:	fd cf       	rjmp	.-6      	; 0xdc <read_adc+0x1a>
+	return ADCW;                    //Returns the ADC value of the chosen channel
+  e2:	80 91 78 00 	lds	r24, 0x0078	; 0x800078 <__DATA_REGION_ORIGIN__+0x18>
+  e6:	90 91 79 00 	lds	r25, 0x0079	; 0x800079 <__DATA_REGION_ORIGIN__+0x19>
+}
+  ea:	08 95       	ret
+
+000000ec <USART_Receive>:
+
+unsigned char USART_Receive( void ){
+	while ( !(UCSR0A & (1<<RXC0)) );/* Get and return received data from buffer */
+  ec:	e0 ec       	ldi	r30, 0xC0	; 192
+  ee:	f0 e0       	ldi	r31, 0x00	; 0
+  f0:	80 81       	ld	r24, Z
+  f2:	88 23       	and	r24, r24
+  f4:	ec f7       	brge	.-6      	; 0xf0 <USART_Receive+0x4>
+	return UDR0;
+  f6:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__DATA_REGION_ORIGIN__+0x66>
+}
+  fa:	08 95       	ret
+
+000000fc <USART_init>:
+
+void USART_init(void){
 	
-	DDRB |= (1<<DDB5); //Configure le pin 5 du port B en sortie, le reste en entrée
-  dc:	24 9a       	sbi	0x04, 4	; 4
+	UBRR0H = (uint8_t)(BAUD_PRESCALLER>>8);
+  fc:	10 92 c5 00 	sts	0x00C5, r1	; 0x8000c5 <__DATA_REGION_ORIGIN__+0x65>
+	UBRR0L = (uint8_t)(BAUD_PRESCALLER);
+ 100:	87 e6       	ldi	r24, 0x67	; 103
+ 102:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__DATA_REGION_ORIGIN__+0x64>
+	UCSR0B = (1<<RXEN0)|(1<<TXEN0);
+ 106:	88 e1       	ldi	r24, 0x18	; 24
+ 108:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__DATA_REGION_ORIGIN__+0x61>
+	UCSR0C = (3<<UCSZ00);
+ 10c:	86 e0       	ldi	r24, 0x06	; 6
+ 10e:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__DATA_REGION_ORIGIN__+0x62>
+ 112:	08 95       	ret
+
+00000114 <USART_send>:
+}
+
+void USART_send( unsigned char data){
+	
+	while(!(UCSR0A & (1<<UDRE0)));
+ 114:	e0 ec       	ldi	r30, 0xC0	; 192
+ 116:	f0 e0       	ldi	r31, 0x00	; 0
+ 118:	90 81       	ld	r25, Z
+ 11a:	95 ff       	sbrs	r25, 5
+ 11c:	fd cf       	rjmp	.-6      	; 0x118 <USART_send+0x4>
+	UDR0 = data;
+ 11e:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__DATA_REGION_ORIGIN__+0x66>
+ 122:	08 95       	ret
+
+00000124 <USART_putstring>:
+	
+}
+
+void USART_putstring(char* StringPtr){
+ 124:	cf 93       	push	r28
+ 126:	df 93       	push	r29
+ 128:	ec 01       	movw	r28, r24
+	
+	while(*StringPtr != 0x00){
+ 12a:	88 81       	ld	r24, Y
+ 12c:	88 23       	and	r24, r24
+ 12e:	29 f0       	breq	.+10     	; 0x13a <USART_putstring+0x16>
+ 130:	21 96       	adiw	r28, 0x01	; 1
+		USART_send(*StringPtr);
+ 132:	f0 df       	rcall	.-32     	; 0x114 <USART_send>
+	
+}
+
+void USART_putstring(char* StringPtr){
+	
+	while(*StringPtr != 0x00){
+ 134:	89 91       	ld	r24, Y+
+ 136:	81 11       	cpse	r24, r1
+ 138:	fc cf       	rjmp	.-8      	; 0x132 <USART_putstring+0xe>
+		USART_send(*StringPtr);
+	StringPtr++;}
+	
+ 13a:	df 91       	pop	r29
+ 13c:	cf 91       	pop	r28
+ 13e:	08 95       	ret
+
+00000140 <main>:
+void USART_send( unsigned char data);    //Function that sends a char over the serial port
+void USART_putstring(char* StringPtr);    //Function that sends a string over the serial port
+unsigned char USART_Receive( void );
+
+int main(void){
+	adc_init();        //Setup the ADC
+ 140:	af df       	rcall	.-162    	; 0xa0 <adc_init>
+	USART_init();        //Setup the USART
+ 142:	dc df       	rcall	.-72     	; 0xfc <USART_init>
+ 144:	25 9a       	sbi	0x04, 5	; 4
+	
+	DDRB |= (1<<DDB5); //Configure le pin 5 du port B en sortie
+ 146:	24 9a       	sbi	0x04, 4	; 4
 	DDRB |= (1<<DDB4);
-  de:	23 9a       	sbi	0x04, 3	; 4
+ 148:	23 9a       	sbi	0x04, 3	; 4
 	DDRB |= (1<<DDB3);
-  e0:	22 9a       	sbi	0x04, 2	; 4
+ 14a:	22 9a       	sbi	0x04, 2	; 4
 	DDRB |= (1<<DDB2);
-  e2:	0f 2e       	mov	r0, r31
-			
-			
-			
+ 14c:	21 9a       	sbi	0x04, 1	; 4
+	DDRB |= (1<<DDB1);
+ 14e:	20 9a       	sbi	0x04, 0	; 4
+	DDRB |= (1<<DDB0);
+ 150:	1c e3       	ldi	r17, 0x3C	; 60
+			USART_send(carac);
+			USART_send('\r');
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
 		}
 		else if(carac=='4'){
 			PORTB=0x3C;
-  e4:	fc e3       	ldi	r31, 0x3C	; 60
-  e6:	ff 2e       	mov	r15, r31
-  e8:	f0 2d       	mov	r31, r0
-  ea:	08 e3       	ldi	r16, 0x38	; 56
-			
-			
-			
+ 152:	d8 e3       	ldi	r29, 0x38	; 56
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+			//_delay_ms(2000);		
 		}
-		else if(carac=='3'){
-			PORTB=0x38;
-  ec:	10 e3       	ldi	r17, 0x30	; 48
-		carac=USART_Receive();
-		USART_Transmit(carac);
-		
-		if(carac=='1')
+		else if(carac=='1')
 		{
 			PORTB=0x20;
-  ee:	d0 e2       	ldi	r29, 0x20	; 32
-	//DDRB = 0x3A;
+ 154:	c0 e2       	ldi	r28, 0x20	; 32
 	
-	while(1){
-		
-		
+	unsigned char carac;
+	
+	for(;;){        //Our infinite loop
+		//unsigned char carac;
 		carac=USART_Receive();
-  f0:	dd df       	rcall	.-70     	; 0xac <USART_Receive>
-  f2:	c8 2f       	mov	r28, r24
-		USART_Transmit(carac);
-  f4:	d3 df       	rcall	.-90     	; 0x9c <USART_Transmit>
-  f6:	c1 33       	cpi	r28, 0x31	; 49
+ 156:	ca df       	rcall	.-108    	; 0xec <USART_Receive>
+ 158:	86 37       	cpi	r24, 0x76	; 118
 		
-		if(carac=='1')
-  f8:	11 f4       	brne	.+4      	; 0xfe <main+0x2c>
-  fa:	d5 b9       	out	0x05, r29	; 5
+		if(carac=='v'){
+ 15a:	a9 f4       	brne	.+42     	; 0x186 <main+0x46>
+			
+			adc_value = read_adc(0);        //Read one ADC channel
+ 15c:	80 e0       	ldi	r24, 0x00	; 0
+ 15e:	b1 df       	rcall	.-158    	; 0xc2 <read_adc>
+ 160:	90 93 05 01 	sts	0x0105, r25	; 0x800105 <__data_end+0x1>
+ 164:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <__data_end>
+    } else if (__radix < 2 || __radix > 36) {
+	*__s = 0;
+	return __s;
+    } else {
+	extern char *__itoa_ncheck (int, char *, unsigned char);
+	return __itoa_ncheck (__val, __s, __radix);
+ 168:	4a e0       	ldi	r20, 0x0A	; 10
+ 16a:	66 e0       	ldi	r22, 0x06	; 6
+ 16c:	71 e0       	ldi	r23, 0x01	; 1
+ 16e:	3b d0       	rcall	.+118    	; 0x1e6 <__itoa_ncheck>
+			itoa(adc_value, buffer, 10);        //Convert the read value to an ascii string
+			USART_putstring("  ");            //Some more formatting
+ 170:	80 e0       	ldi	r24, 0x00	; 0
+ 172:	91 e0       	ldi	r25, 0x01	; 1
+			USART_putstring(buffer);        //Send the converted value to the terminal
+ 174:	d7 df       	rcall	.-82     	; 0x124 <USART_putstring>
+ 176:	86 e0       	ldi	r24, 0x06	; 6
+ 178:	91 e0       	ldi	r25, 0x01	; 1
+			
+			                //You can tweak this value to have slower or faster readings or for max speed remove this line
+			USART_send('\r');
+ 17a:	d4 df       	rcall	.-88     	; 0x124 <USART_putstring>
+ 17c:	8d e0       	ldi	r24, 0x0D	; 13
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+ 17e:	ca df       	rcall	.-108    	; 0x114 <USART_send>
+ 180:	8a e0       	ldi	r24, 0x0A	; 10
+			//_delay_ms(2000);		
+		}
+		else if(carac=='1')
+ 182:	c8 df       	rcall	.-112    	; 0x114 <USART_send>
+ 184:	e8 cf       	rjmp	.-48     	; 0x156 <main+0x16>
 		{
 			PORTB=0x20;
-  fc:	f9 cf       	rjmp	.-14     	; 0xf0 <main+0x1e>
-  fe:	c2 33       	cpi	r28, 0x32	; 50
-			
-			
-			
+ 186:	81 33       	cpi	r24, 0x31	; 49
+			USART_send(carac);
+ 188:	39 f4       	brne	.+14     	; 0x198 <main+0x58>
+ 18a:	c5 b9       	out	0x05, r28	; 5
+			USART_send('\r');
+ 18c:	c3 df       	rcall	.-122    	; 0x114 <USART_send>
+ 18e:	8d e0       	ldi	r24, 0x0D	; 13
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+ 190:	c1 df       	rcall	.-126    	; 0x114 <USART_send>
+ 192:	8a e0       	ldi	r24, 0x0A	; 10
+ 194:	bf df       	rcall	.-130    	; 0x114 <USART_send>
 		}
 		else if(carac=='2'){
- 100:	11 f4       	brne	.+4      	; 0x106 <main+0x34>
- 102:	15 b9       	out	0x05, r17	; 5
+ 196:	df cf       	rjmp	.-66     	; 0x156 <main+0x16>
+ 198:	82 33       	cpi	r24, 0x32	; 50
 			PORTB=0x30;
- 104:	f5 cf       	rjmp	.-22     	; 0xf0 <main+0x1e>
- 106:	c3 33       	cpi	r28, 0x33	; 51
-			
-			
-			
+ 19a:	49 f4       	brne	.+18     	; 0x1ae <main+0x6e>
+			USART_send(carac);
+ 19c:	80 e3       	ldi	r24, 0x30	; 48
+ 19e:	85 b9       	out	0x05, r24	; 5
+			USART_send('\r');
+ 1a0:	82 e3       	ldi	r24, 0x32	; 50
+ 1a2:	b8 df       	rcall	.-144    	; 0x114 <USART_send>
+ 1a4:	8d e0       	ldi	r24, 0x0D	; 13
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+ 1a6:	b6 df       	rcall	.-148    	; 0x114 <USART_send>
+ 1a8:	8a e0       	ldi	r24, 0x0A	; 10
+ 1aa:	b4 df       	rcall	.-152    	; 0x114 <USART_send>
 		}
 		else if(carac=='3'){
- 108:	11 f4       	brne	.+4      	; 0x10e <main+0x3c>
- 10a:	05 b9       	out	0x05, r16	; 5
+ 1ac:	d4 cf       	rjmp	.-88     	; 0x156 <main+0x16>
 			PORTB=0x38;
- 10c:	f1 cf       	rjmp	.-30     	; 0xf0 <main+0x1e>
- 10e:	c4 33       	cpi	r28, 0x34	; 52
-			
-			
-			
+ 1ae:	83 33       	cpi	r24, 0x33	; 51
+			USART_send(carac);
+ 1b0:	39 f4       	brne	.+14     	; 0x1c0 <main+0x80>
+ 1b2:	d5 b9       	out	0x05, r29	; 5
+			USART_send('\r');
+ 1b4:	af df       	rcall	.-162    	; 0x114 <USART_send>
+ 1b6:	8d e0       	ldi	r24, 0x0D	; 13
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+ 1b8:	ad df       	rcall	.-166    	; 0x114 <USART_send>
+ 1ba:	8a e0       	ldi	r24, 0x0A	; 10
+ 1bc:	ab df       	rcall	.-170    	; 0x114 <USART_send>
 		}
 		else if(carac=='4'){
- 110:	11 f4       	brne	.+4      	; 0x116 <main+0x44>
- 112:	f5 b8       	out	0x05, r15	; 5
+ 1be:	cb cf       	rjmp	.-106    	; 0x156 <main+0x16>
+ 1c0:	84 33       	cpi	r24, 0x34	; 52
 			PORTB=0x3C;
- 114:	ed cf       	rjmp	.-38     	; 0xf0 <main+0x1e>
- 116:	c0 33       	cpi	r28, 0x30	; 48
-			
-			
-			
+ 1c2:	39 f4       	brne	.+14     	; 0x1d2 <main+0x92>
+			USART_send(carac);
+ 1c4:	15 b9       	out	0x05, r17	; 5
+ 1c6:	a6 df       	rcall	.-180    	; 0x114 <USART_send>
+			USART_send('\r');
+ 1c8:	8d e0       	ldi	r24, 0x0D	; 13
+ 1ca:	a4 df       	rcall	.-184    	; 0x114 <USART_send>
+ 1cc:	8a e0       	ldi	r24, 0x0A	; 10
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+ 1ce:	a2 df       	rcall	.-188    	; 0x114 <USART_send>
+ 1d0:	c2 cf       	rjmp	.-124    	; 0x156 <main+0x16>
+ 1d2:	80 33       	cpi	r24, 0x30	; 48
+ 1d4:	09 f0       	breq	.+2      	; 0x1d8 <main+0x98>
 		}
 		else if(carac=='0'){
- 118:	59 f7       	brne	.-42     	; 0xf0 <main+0x1e>
- 11a:	15 b8       	out	0x05, r1	; 5
+ 1d6:	bf cf       	rjmp	.-130    	; 0x156 <main+0x16>
+ 1d8:	15 b8       	out	0x05, r1	; 5
+ 1da:	9c df       	rcall	.-200    	; 0x114 <USART_send>
 			PORTB=0x00;
- 11c:	e9 cf       	rjmp	.-46     	; 0xf0 <main+0x1e>
+ 1dc:	8d e0       	ldi	r24, 0x0D	; 13
+			USART_send(carac);
+ 1de:	9a df       	rcall	.-204    	; 0x114 <USART_send>
+ 1e0:	8a e0       	ldi	r24, 0x0A	; 10
+			USART_send('\r');
+ 1e2:	98 df       	rcall	.-208    	; 0x114 <USART_send>
+ 1e4:	b8 cf       	rjmp	.-144    	; 0x156 <main+0x16>
 
-0000011e <_exit>:
- 11e:	f8 94       	cli
+000001e6 <__itoa_ncheck>:
+ 1e6:	bb 27       	eor	r27, r27
+			USART_send('\n');                //This two lines are to tell to the terminal to change line
+ 1e8:	4a 30       	cpi	r20, 0x0A	; 10
+ 1ea:	31 f4       	brne	.+12     	; 0x1f8 <__itoa_ncheck+0x12>
+ 1ec:	99 23       	and	r25, r25
+ 1ee:	22 f4       	brpl	.+8      	; 0x1f8 <__itoa_ncheck+0x12>
+ 1f0:	bd e2       	ldi	r27, 0x2D	; 45
+ 1f2:	90 95       	com	r25
+ 1f4:	81 95       	neg	r24
+ 1f6:	9f 4f       	sbci	r25, 0xFF	; 255
+ 1f8:	01 c0       	rjmp	.+2      	; 0x1fc <__utoa_common>
 
-00000120 <__stop_program>:
- 120:	ff cf       	rjmp	.-2      	; 0x120 <__stop_program>
+000001fa <__utoa_ncheck>:
+ 1fa:	bb 27       	eor	r27, r27
+
+000001fc <__utoa_common>:
+ 1fc:	fb 01       	movw	r30, r22
+ 1fe:	55 27       	eor	r21, r21
+ 200:	aa 27       	eor	r26, r26
+ 202:	88 0f       	add	r24, r24
+ 204:	99 1f       	adc	r25, r25
+ 206:	aa 1f       	adc	r26, r26
+ 208:	a4 17       	cp	r26, r20
+ 20a:	10 f0       	brcs	.+4      	; 0x210 <__utoa_common+0x14>
+ 20c:	a4 1b       	sub	r26, r20
+ 20e:	83 95       	inc	r24
+ 210:	50 51       	subi	r21, 0x10	; 16
+ 212:	b9 f7       	brne	.-18     	; 0x202 <__utoa_common+0x6>
+ 214:	a0 5d       	subi	r26, 0xD0	; 208
+ 216:	aa 33       	cpi	r26, 0x3A	; 58
+ 218:	08 f0       	brcs	.+2      	; 0x21c <__utoa_common+0x20>
+ 21a:	a9 5d       	subi	r26, 0xD9	; 217
+ 21c:	a1 93       	st	Z+, r26
+ 21e:	00 97       	sbiw	r24, 0x00	; 0
+ 220:	79 f7       	brne	.-34     	; 0x200 <__utoa_common+0x4>
+ 222:	b1 11       	cpse	r27, r1
+ 224:	b1 93       	st	Z+, r27
+ 226:	11 92       	st	Z+, r1
+ 228:	cb 01       	movw	r24, r22
+ 22a:	00 c0       	rjmp	.+0      	; 0x22c <strrev>
+
+0000022c <strrev>:
+ 22c:	dc 01       	movw	r26, r24
+ 22e:	fc 01       	movw	r30, r24
+ 230:	67 2f       	mov	r22, r23
+ 232:	71 91       	ld	r23, Z+
+ 234:	77 23       	and	r23, r23
+ 236:	e1 f7       	brne	.-8      	; 0x230 <strrev+0x4>
+ 238:	32 97       	sbiw	r30, 0x02	; 2
+ 23a:	04 c0       	rjmp	.+8      	; 0x244 <strrev+0x18>
+ 23c:	7c 91       	ld	r23, X
+ 23e:	6d 93       	st	X+, r22
+ 240:	70 83       	st	Z, r23
+ 242:	62 91       	ld	r22, -Z
+ 244:	ae 17       	cp	r26, r30
+ 246:	bf 07       	cpc	r27, r31
+ 248:	c8 f3       	brcs	.-14     	; 0x23c <strrev+0x10>
+ 24a:	08 95       	ret
+
+0000024c <_exit>:
+ 24c:	f8 94       	cli
+
+0000024e <__stop_program>:
+ 24e:	ff cf       	rjmp	.-2      	; 0x24e <__stop_program>
