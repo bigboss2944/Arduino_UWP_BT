@@ -49,6 +49,7 @@ namespace Arduino_UWP_BT
     {
         // The Chat Server's custom service Uuid: 34B1CF4D-1069-4AD6-89B6-E161D79BE4D8
         public static readonly Guid RfcommChatServiceUuid = Guid.Parse("00001101-0000-1000-8000-00805F9B34FB");
+        
 
         // The Id of the Service Name SDP attribute
         public const UInt16 SdpServiceNameAttributeId = 0x100;

@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>cbe647c1-b8af-45df-819d-8d1eabe2ae65</PackageIdentityName>
     <PackageIdentityPublisher>CN=fabrice</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>EA5CCF832C12641D44C64C10E354CD92064609CBADA6607A051CD0395E0B7677</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>28FB65D24AB696F50953287B12AE8137DD5911EDC37D2184ADAD838BBCED700B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>cbe647c1-b8af-45df-819d-8d1eabe2ae65_1.0.0.0_x64__9648ya3p3p55y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>cbe647c1-b8af-45df-819d-8d1eabe2ae65_9648ya3p3p55y!App</RegisteredUserModeAppID>
     <RegisteredPackageID>cbe647c1-b8af-45df-819d-8d1eabe2ae65</RegisteredPackageID>
@@ -27,152 +27,152 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-04-01T15:27:19.865</Modified>
+      <Modified>2021-02-26T15:40:44.519</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\Arduino_UWP_BT.exe">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\Arduino_UWP_BT.exe">
       <PackagePath>entrypoint\Arduino_UWP_BT.exe</PackagePath>
-      <Modified>2020-04-01T15:27:19.293</Modified>
+      <Modified>2021-02-26T15:40:43.568</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\fabrice\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2019-07-22T13:01:12.000</Modified>
+      <Modified>2021-02-05T00:15:54.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
-      <Modified>2019-03-18T17:36:56.000</Modified>
+      <Modified>2018-10-23T00:33:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-03-30T14:23:21.627</Modified>
+      <Modified>2021-01-25T13:38:54.196</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2020-03-25T09:58:29.316</Modified>
+      <Modified>2021-01-25T13:38:54.153</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-25T09:58:29.316</Modified>
+      <Modified>2021-01-25T13:38:54.158</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-25T09:58:29.316</Modified>
+      <Modified>2021-01-25T13:38:54.161</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-25T09:58:29.316</Modified>
+      <Modified>2021-01-25T13:38:54.164</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-25T09:58:29.316</Modified>
+      <Modified>2021-01-25T13:38:54.167</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-25T09:58:29.316</Modified>
+      <Modified>2021-01-25T13:38:54.170</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-03-25T09:58:29.316</Modified>
+      <Modified>2021-01-25T13:38:54.173</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\Arduino_UWP_BT.xr.xml">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\Arduino_UWP_BT.xr.xml">
       <PackagePath>Arduino_UWP_BT.xr.xml</PackagePath>
-      <Modified>2020-03-30T16:12:03.250</Modified>
+      <Modified>2021-01-25T13:38:55.375</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-04-01T15:27:19.033</Modified>
+      <Modified>2021-02-26T15:40:43.389</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\Scenario1_ChatClient.xbf">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\Scenario1_ChatClient.xbf">
       <PackagePath>Scenario1_ChatClient.xbf</PackagePath>
-      <Modified>2020-04-01T15:27:19.025</Modified>
+      <Modified>2021-02-26T15:40:43.377</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-04-01T15:27:19.034</Modified>
+      <Modified>2021-02-26T15:40:43.399</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\Scenario2_Button.xbf">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\Scenario2_Button.xbf">
       <PackagePath>Scenario2_Button.xbf</PackagePath>
-      <Modified>2020-04-01T15:27:19.033</Modified>
+      <Modified>2021-02-26T15:40:43.385</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\Styles\Styles.xbf">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\Styles\Styles.xbf">
       <PackagePath>Styles\Styles.xbf</PackagePath>
-      <Modified>2020-04-01T15:27:19.021</Modified>
+      <Modified>2021-02-26T15:40:43.372</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2019-03-18T16:33:42.000</Modified>
+      <Modified>2018-10-22T23:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-04-01T14:08:50.520</Modified>
+      <Modified>2021-02-26T15:29:01.534</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\Arduino_UWP_BT\Arduino_UWP_BT\bin\x64\Debug\Core\Arduino_UWP_BT.exe">
+    <AppxPackagedFile Include="C:\Users\fabrice\source\repos\fabrice-noel29\Arduino_UWP_BT_2\Arduino_UWP_BT\bin\x64\Debug\Core\Arduino_UWP_BT.exe">
       <PackagePath>Arduino_UWP_BT.exe</PackagePath>
-      <Modified>2020-04-01T15:27:19.858</Modified>
+      <Modified>2021-02-26T15:40:44.508</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\fabrice\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.27902.3</Version>
+      <Version>2.2.29713.2</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\fabrice\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\fabrice\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.27902.3</Version>
+      <Version>2.2.29713.2</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\fabrice\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\fabrice\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
-      <Version>2.2.27902.3</Version>
+      <Version>2.2.29713.2</Version>
       <Architecture>arm</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.27902.3, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.29713.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\fabrice\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\fabrice\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.27909.0</Version>
+      <Version>2.2.29301.2</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27909.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\fabrice\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\fabrice\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.27909.0</Version>
+      <Version>2.2.29301.2</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27909.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\fabrice\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\fabrice\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
-      <Version>2.2.27909.0</Version>
+      <Version>2.2.29301.2</Version>
       <Architecture>arm</Architecture>
-      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27909.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.9\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.29301.2, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\fabrice\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.12\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>

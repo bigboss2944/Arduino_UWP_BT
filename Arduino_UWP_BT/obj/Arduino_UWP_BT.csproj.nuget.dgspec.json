@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fabrice\\source\\repos\\Arduino_UWP_BT\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj": {}
+    "C:\\Users\\fabrice\\source\\repos\\fabrice-noel29\\Arduino_UWP_BT_2\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fabrice\\source\\repos\\Arduino_UWP_BT\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj": {
+    "C:\\Users\\fabrice\\source\\repos\\fabrice-noel29\\Arduino_UWP_BT_2\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fabrice\\source\\repos\\Arduino_UWP_BT\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj",
+        "projectUniqueName": "C:\\Users\\fabrice\\source\\repos\\fabrice-noel29\\Arduino_UWP_BT_2\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj",
         "projectName": "Arduino_UWP_BT",
-        "projectPath": "C:\\Users\\fabrice\\source\\repos\\Arduino_UWP_BT\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj",
+        "projectPath": "C:\\Users\\fabrice\\source\\repos\\fabrice-noel29\\Arduino_UWP_BT_2\\Arduino_UWP_BT\\Arduino_UWP_BT.csproj",
         "packagesPath": "C:\\Users\\fabrice\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fabrice\\source\\repos\\Arduino_UWP_BT\\Arduino_UWP_BT\\obj\\",
+        "outputPath": "C:\\Users\\fabrice\\source\\repos\\fabrice-noel29\\Arduino_UWP_BT_2\\Arduino_UWP_BT\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -24,24 +24,24 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "uap10.0.17134"
+          "uap10.0.17763"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "uap10.0.17134": {
+          "uap10.0.17763": {
             "projectReferences": {}
           }
         }
       },
       "frameworks": {
-        "uap10.0.17134": {
+        "uap10.0.17763": {
           "dependencies": {
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
-              "version": "[6.2.9, )"
+              "version": "[6.2.12, )"
             },
             "System.IO": {
               "target": "Package",
